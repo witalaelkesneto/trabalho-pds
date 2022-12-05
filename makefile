@@ -1,60 +1,85 @@
 CC := g++
 SRCDIR := src
 BUILDDIR := build
+EXCEPTIONSDIR := exceptions
+TESTSDIR := tests
+LIBDIR := third_party
+DOCTEST := $(LIBDIR)/doctest.h
 TARGET := main
 CFLAGS := -g -Wall -O3 -std=c++11 -I include/
+IFLAGS := -I $(LIBDIR) -I include
 
-all: main
+all: main tests
 
 main: sistema
-	$(CC) $(CFLAGS)  build/tetoException.o build/gastoException.o build/hospitalExisteException.o build/hospitalNaoExisteException.o build/tipoInvalidoException.o build/senhaErradaException.o build/usuarioNaoExisteException.o build/usuarioExisteException.o build/menuException.o build/cidadao.o build/secretario.o build/prefeito.o build/hospital.o build/usuario.o build/sistema.o src/main.cpp -o $(TARGET)
+	$(CC) $(CFLAGS) $(BUILDDIR)/* $(SRCDIR)/main.cpp -o $(TARGET)
 
 sistema: cidadao secretario prefeito hospital menuException usuarioNaoExisteException usuarioExisteException senhaErradaException tipoInvalidoException
-	$(CC) $(CFLAGS) -c src/sistema.cpp -o build/sistema.o
+	$(CC) $(CFLAGS) -c $(SRCDIR)/sistema.cpp -o $(BUILDDIR)/sistema.o
 
 cidadao: usuario
-	$(CC) $(CFLAGS) -c src/cidadao.cpp -o build/cidadao.o
+	$(CC) $(CFLAGS) -c $(SRCDIR)/cidadao.cpp -o $(BUILDDIR)/cidadao.o
 
 secretario: usuario gastoException
-	$(CC) $(CFLAGS) -c src/secretario.cpp -o build/secretario.o
+	$(CC) $(CFLAGS) -c $(SRCDIR)/secretario.cpp -o $(BUILDDIR)/secretario.o
 
 prefeito: usuario hospitalExisteException gastoException tetoException
-	$(CC) $(CFLAGS) -c src/prefeito.cpp -o build/prefeito.o
+	$(CC) $(CFLAGS) -c $(SRCDIR)/prefeito.cpp -o $(BUILDDIR)/prefeito.o
 
 usuario: menuException usuarioExisteException hospitalNaoExisteException
-	$(CC) $(CFLAGS) -c src/usuario.cpp -o build/usuario.o
+	$(CC) $(CFLAGS) -c $(SRCDIR)/usuario.cpp -o $(BUILDDIR)/usuario.o
 
 hospital:
-	$(CC) $(CFLAGS) -c src/hospital.cpp -o build/hospital.o
+	$(CC) $(CFLAGS) -c $(SRCDIR)/hospital.cpp -o $(BUILDDIR)/hospital.o
 
 menuException:
-	$(CC) $(CFLAGS) -c exceptions/menuException.cpp -o build/menuException.o
+	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/menuException.cpp -o $(BUILDDIR)/menuException.o
 
 usuarioNaoExisteException:
-	$(CC) $(CFLAGS) -c exceptions/usuarioNaoExisteException.cpp -o build/usuarioNaoExisteException.o
+	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/usuarioNaoExisteException.cpp -o $(BUILDDIR)/usuarioNaoExisteException.o
 
 usuarioExisteException:
-	$(CC) $(CFLAGS) -c exceptions/usuarioExisteException.cpp -o build/usuarioExisteException.o
+	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/usuarioExisteException.cpp -o $(BUILDDIR)/usuarioExisteException.o
 
 senhaErradaException:
-	$(CC) $(CFLAGS) -c exceptions/senhaErradaException.cpp -o build/senhaErradaException.o
+	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/senhaErradaException.cpp -o $(BUILDDIR)/senhaErradaException.o
 
 tipoInvalidoException:
-	$(CC) $(CFLAGS) -c exceptions/tipoInvalidoException.cpp -o build/tipoInvalidoException.o
+	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/tipoInvalidoException.cpp -o $(BUILDDIR)/tipoInvalidoException.o
 
 hospitalNaoExisteException:
-	$(CC) $(CFLAGS) -c exceptions/hospitalNaoExisteException.cpp -o build/hospitalNaoExisteException.o
+	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/hospitalNaoExisteException.cpp -o $(BUILDDIR)/hospitalNaoExisteException.o
 
 hospitalExisteException:
-	$(CC) $(CFLAGS) -c exceptions/hospitalExisteException.cpp -o build/hospitalExisteException.o
+	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/hospitalExisteException.cpp -o $(BUILDDIR)/hospitalExisteException.o
 
 gastoException:
-	$(CC) $(CFLAGS) -c exceptions/gastoException.cpp -o build/gastoException.o
+	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/gastoException.cpp -o $(BUILDDIR)/gastoException.o
 
 tetoException:
-	$(CC) $(CFLAGS) -c exceptions/tetoException.cpp -o build/tetoException.o
+	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/tetoException.cpp -o $(BUILDDIR)/tetoException.o
 
-clean:
+tests: hospitalTest cidadaoTest secretarioTest prefeitoTest sistemaTest
+
+hospitalTest: hospital
+	$(CC) $(IFLAGS) $(DOCTEST) $(BUILDDIR)/hospital.o $(TESTSDIR)/$(SRCDIR)/hospitalTest.cpp -o $(TESTSDIR)/$(BUILDDIR)/hospitalTest
+
+cidadaoTest: cidadao
+	$(CC) $(IFLAGS) $(DOCTEST) $(BUILDDIR)/* $(TESTSDIR)/$(SRCDIR)/cidadaoTest.cpp -o $(TESTSDIR)/$(BUILDDIR)/cidadaoTest
+
+secretarioTest: secretario
+	$(CC) $(IFLAGS) $(DOCTEST) $(BUILDDIR)/* $(TESTSDIR)/$(SRCDIR)/secretarioTest.cpp -o $(TESTSDIR)/$(BUILDDIR)/secretarioTest
+
+prefeitoTest: prefeito
+	$(CC) $(IFLAGS) $(DOCTEST) $(BUILDDIR)/* $(TESTSDIR)/$(SRCDIR)/prefeitoTest.cpp -o $(TESTSDIR)/$(BUILDDIR)/prefeitoTest
+
+sistemaTest: sistema
+	$(CC) $(IFLAGS) $(DOCTEST) $(BUILDDIR)/* $(TESTSDIR)/$(SRCDIR)/sistemaTest.cpp -o $(TESTSDIR)/$(BUILDDIR)/sistemaTest
+
+cleanTests:
+	$(RM) -r $(TESTSDIR)/$(BUILDDIR)/* $(TARGET)
+
+clean: cleanTests
 	$(RM) -r $(BUILDDIR)/* $(TARGET)
 
 doxy:

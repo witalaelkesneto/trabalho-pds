@@ -17,13 +17,17 @@
 
 #### Intruções
     Compilação:
-        Digitar "make" no temrinal
+        Digitar "make" no terminal
     Execução:
-        Após compilado, rodar o arquivo main, digitando "./main" no temrinal
+        Após compilado, rodar o arquivo main, digitando "./main" no temrinal.
     Testes de código:
         Após executado irá aparecer um menu que para selecionar uma opção, basta digitar o número que aparece em frente as opções e assim o programa se segue, quando for necessário outras infomações ele irá pedir, por exemplo, para inserir um usuário é preciso digitar o nome de usuário, senha e nome completo.
     Doxygen:
-        Para gerar a documentação basta digitar "make doxy" no terminal
+        Para gerar a documentação basta digitar "make doxy" no terminal.
+    Tests:
+        Após compilado, acessar o caminho /tests/build/ e rodar o teste desejado digitando "./nomeDoAquivo" no terminal.
+    Limpar Arquivos:
+        Para limpar os builds dos arquivos basta digitar "make clean" no terminal.
 
 #### UML
 ![alt text](https://raw.githubusercontent.com/witalaelkesneto/trabalho-pds/72cd4ee94ac7ca2653ad2d7da1582b9dad5b44c5/UML.svg)
