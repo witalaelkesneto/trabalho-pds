@@ -56,3 +56,6 @@ tetoException:
 
 clean:
 	$(RM) -r $(BUILDDIR)/* $(TARGET)
+
+doxy:
+	doxygen doxyconfig

@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" title=" " alt="" coords="5,208,92,235"/>
+<area shape="rect" id="node2" href="$classGastoException.html" title="Classe Gastoexception que é lançada quando um gasto ultrapassa o valor disponível pra orçamento." alt="" coords="181,5,305,32"/>
+<area shape="rect" id="node3" href="$classHospitalExisteException.html" title="Classe HospitalExisteException que é lançada quando um hospital já existe no sistema." alt="" coords="153,56,333,83"/>
+<area shape="rect" id="node4" href="$classHospitalNaoExisteException.html" title="Classe HospitalNaoExisteException que é lançada quando um hospital não esta cadastrado no sistema." alt="" coords="140,107,347,133"/>
+<area shape="rect" id="node5" href="$classMenuException.html" title="Classe MenuException que é lançada quando o menu não é apagado." alt="" coords="182,157,305,184"/>
+<area shape="rect" id="node6" href="$classSenhaErradaException.html" title="Classe SenhaErradaException que é lançada quando a senha inserida não é igual a que foi cadastrada." alt="" coords="159,208,327,235"/>
+<area shape="rect" id="node7" href="$classTetoException.html" title=" " alt="" coords="187,259,300,285"/>
+<area shape="rect" id="node8" href="$classTipoInvalidoException.html" title="Classe TipoInvalidoException que é lançada quando um tipo não for reconhecido pelo sistema." alt="" coords="160,309,327,336"/>
+<area shape="rect" id="node9" href="$classUsuarioExisteException.html" title="Classe UsuarioExisteException que é lançada quando um usuário ja esta cadastrado no sistema." alt="" coords="155,360,331,387"/>
+<area shape="rect" id="node10" href="$classUsuarioNaoExisteException.html" title="Classe UsuarioNaoExisteException que é lançada quando um usuário não esta cadastrado no sistema." alt="" coords="142,411,345,437"/>
+</map>

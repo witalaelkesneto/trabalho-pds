@@ -1,0 +1,11 @@
+<map id="include/usuario.hpp" name="include/usuario.hpp">
+<area shape="rect" id="node1" title="Arquivo da classe Usuario." alt="" coords="393,5,542,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="221,155,279,181"/>
+<area shape="rect" id="node3" title=" " alt="" coords="813,80,876,107"/>
+<area shape="rect" id="node4" href="$hospital_8hpp.html" title="Arquivo da classe Hospital." alt="" coords="512,80,615,107"/>
+<area shape="rect" id="node7" href="$menuException_8hpp.html" title="Arquivo da classe MenuException." alt="" coords="639,80,789,107"/>
+<area shape="rect" id="node8" href="$usuarioExisteException_8hpp.html" title=" " alt="" coords="29,80,231,107"/>
+<area shape="rect" id="node9" href="$hospitalNaoExisteException_8hpp.html" title="Arquivo da classe HospitalNaoExisteException." alt="" coords="255,80,487,107"/>
+<area shape="rect" id="node5" title=" " alt="" coords="377,155,457,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="526,155,601,181"/>
+</map>

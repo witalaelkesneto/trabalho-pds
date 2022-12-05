@@ -1,0 +1,15 @@
+<map id="include/hospital.hpp" name="include/hospital.hpp">
+<area shape="rect" id="node1" title="Arquivo da classe Hospital." alt="" coords="630,5,783,32"/>
+<area shape="rect" id="node2" href="$usuario_8hpp.html" title="Arquivo da classe Usuario." alt="" coords="335,80,484,107"/>
+<area shape="rect" id="node4" href="$sistema_8hpp.html" title="Arquivo da classe Sistema." alt="" coords="427,229,581,256"/>
+<area shape="rect" id="node13" href="$hospital_8cpp.html" title=" " alt="" coords="745,80,869,107"/>
+<area shape="rect" id="node3" href="$cidadao_8hpp.html" title="Arquivo da classe Cidadao." alt="" coords="517,155,669,181"/>
+<area shape="rect" id="node8" href="$prefeito_8hpp.html" title="Arquivo da classe Prefeito." alt="" coords="5,155,157,181"/>
+<area shape="rect" id="node10" href="$secretario_8hpp.html" title="Arquivo da classe Secretario." alt="" coords="326,155,493,181"/>
+<area shape="rect" id="node12" href="$usuario_8cpp.html" title=" " alt="" coords="181,155,301,181"/>
+<area shape="rect" id="node7" href="$cidadao_8cpp.html" title=" " alt="" coords="605,229,728,256"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title=" " alt="" coords="382,304,487,331"/>
+<area shape="rect" id="node6" href="$sistema_8cpp.html" title=" " alt="" coords="511,304,635,331"/>
+<area shape="rect" id="node9" href="$prefeito_8cpp.html" title=" " alt="" coords="20,229,143,256"/>
+<area shape="rect" id="node11" href="$secretario_8cpp.html" title=" " alt="" coords="266,229,403,256"/>
+</map>
