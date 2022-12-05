@@ -13,6 +13,10 @@
 #include <iostream>
 #include <string>
 
+/**
+ * @brief Classe TetoException que é lançada quando o valor do teto é ultrapassado
+ *
+ */
 class TetoException : public std::exception
 {
 private:

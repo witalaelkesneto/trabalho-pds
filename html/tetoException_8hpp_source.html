@@ -76,20 +76,20 @@ $(function() {
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classTetoException.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTetoException.html">TetoException</a> : <span class="keyword">public</span> std::exception</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classTetoException.html#a2773dde4238aa7af5d58ebf97667423c">   19</a></span>&#160;    std::string <a class="code" href="classTetoException.html#a2773dde4238aa7af5d58ebf97667423c">_msg</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="classTetoException.html#ab828a9640088399261087c7795f1b5fc">TetoException</a>(<span class="keywordtype">double</span> valorOrcado, <span class="keywordtype">double</span> valorTeto);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classTetoException.html#a764adf8caafb192c1aa9737c89037f97">what</a>() const noexcept;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classTetoException.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTetoException.html">TetoException</a> : <span class="keyword">public</span> std::exception</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classTetoException.html#a2773dde4238aa7af5d58ebf97667423c">   23</a></span>&#160;    std::string <a class="code" href="classTetoException.html#a2773dde4238aa7af5d58ebf97667423c">_msg</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="classTetoException.html#ab828a9640088399261087c7795f1b5fc">TetoException</a>(<span class="keywordtype">double</span> valorOrcado, <span class="keywordtype">double</span> valorTeto);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classTetoException.html#a764adf8caafb192c1aa9737c89037f97">what</a>() const noexcept;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassTetoException_html_ab828a9640088399261087c7795f1b5fc"><div class="ttname"><a href="classTetoException.html#ab828a9640088399261087c7795f1b5fc">TetoException::TetoException</a></div><div class="ttdeci">TetoException(double valorOrcado, double valorTeto)</div><div class="ttdoc">Construct a new Teto Exception object.</div><div class="ttdef"><b>Definition:</b> tetoException.cpp:3</div></div>
-<div class="ttc" id="aclassTetoException_html"><div class="ttname"><a href="classTetoException.html">TetoException</a></div><div class="ttdef"><b>Definition:</b> tetoException.hpp:16</div></div>
+<div class="ttc" id="aclassTetoException_html"><div class="ttname"><a href="classTetoException.html">TetoException</a></div><div class="ttdoc">Classe TetoException que é lançada quando o valor do teto é ultrapassado.</div><div class="ttdef"><b>Definition:</b> tetoException.hpp:20</div></div>
 <div class="ttc" id="aclassTetoException_html_a764adf8caafb192c1aa9737c89037f97"><div class="ttname"><a href="classTetoException.html#a764adf8caafb192c1aa9737c89037f97">TetoException::what</a></div><div class="ttdeci">const char * what() const noexcept</div><div class="ttdoc">Retorna a mensagem da exceção.</div><div class="ttdef"><b>Definition:</b> tetoException.cpp:7</div></div>
-<div class="ttc" id="aclassTetoException_html_a2773dde4238aa7af5d58ebf97667423c"><div class="ttname"><a href="classTetoException.html#a2773dde4238aa7af5d58ebf97667423c">TetoException::_msg</a></div><div class="ttdeci">std::string _msg</div><div class="ttdef"><b>Definition:</b> tetoException.hpp:19</div></div>
+<div class="ttc" id="aclassTetoException_html_a2773dde4238aa7af5d58ebf97667423c"><div class="ttname"><a href="classTetoException.html#a2773dde4238aa7af5d58ebf97667423c">TetoException::_msg</a></div><div class="ttdeci">std::string _msg</div><div class="ttdef"><b>Definition:</b> tetoException.hpp:23</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -96,7 +96,7 @@
 <!-- Node13 -->
 <g id="node7" class="node">
 <title>Node13</title>
-<g id="a_node7"><a xlink:href="classTetoException.html" target="_top" xlink:title=" ">
+<g id="a_node7"><a xlink:href="classTetoException.html" target="_top" xlink:title="Classe TetoException que é lançada quando o valor do teto é ultrapassado.">
 <polygon fill="white" stroke="black" points="136,-114.5 136,-133.5 221,-133.5 221,-114.5 136,-114.5"/>
 <text text-anchor="middle" x="178.5" y="-121.5" font-family="Helvetica,sans-Serif" font-size="10.00">TetoException</text>
 </a>
