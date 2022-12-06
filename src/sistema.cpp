@@ -2,7 +2,7 @@
 
 Sistema::Sistema()
 {
-    *_valorTeto = 10000;
+    _valorTeto = new double(10000);
     _usuarios.push_back(new Cidadao("carlos", "teste", "Carlos Silva", "Cidadão"));
     _usuarios.push_back(new Secretario("bruno", "teste", "Bruno Andrade", "Secretário"));
     _usuarios.push_back(new Prefeito("anna", "teste", "Anna Luiza", "Prefeito"));

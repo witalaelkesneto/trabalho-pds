@@ -59,7 +59,7 @@ gastoException:
 tetoException:
 	$(CC) $(CFLAGS) -c $(EXCEPTIONSDIR)/tetoException.cpp -o $(BUILDDIR)/tetoException.o
 
-tests: hospitalTest cidadaoTest secretarioTest prefeitoTest sistemaTest
+tests: hospitalTest cidadaoTest secretarioTest prefeitoTest
 
 hospitalTest: hospital
 	$(CC) $(IFLAGS) $(DOCTEST) $(BUILDDIR)/hospital.o $(TESTSDIR)/$(SRCDIR)/hospitalTest.cpp -o $(TESTSDIR)/$(BUILDDIR)/hospitalTest
@@ -72,9 +72,6 @@ secretarioTest: secretario
 
 prefeitoTest: prefeito
 	$(CC) $(IFLAGS) $(DOCTEST) $(BUILDDIR)/* $(TESTSDIR)/$(SRCDIR)/prefeitoTest.cpp -o $(TESTSDIR)/$(BUILDDIR)/prefeitoTest
-
-sistemaTest: sistema
-	$(CC) $(IFLAGS) $(DOCTEST) $(BUILDDIR)/* $(TESTSDIR)/$(SRCDIR)/sistemaTest.cpp -o $(TESTSDIR)/$(BUILDDIR)/sistemaTest
 
 cleanTests:
 	$(RM) -r $(TESTSDIR)/$(BUILDDIR)/* $(TARGET)
